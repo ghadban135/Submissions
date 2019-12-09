@@ -1,6 +1,6 @@
 # Ahmad Ghadban
 
-![](image.jpeg)
+![](index.jpeg)
 
 ---
 
