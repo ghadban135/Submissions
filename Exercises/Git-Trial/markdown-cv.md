@@ -1,5 +1,7 @@
 # Ahmad Ghadban
 
+![](image.jpeg)
+
 ---
 
                              Address: beirut,Lebanon
@@ -37,7 +39,6 @@ November 2017- June 2019| Project: "MERCURY CLUB";new waterfront,Beirut.
   - Arabic (native speaker),
   - French (intermidiate level),
   - English (intermidiate level),
-  - russian (advance level.)
 
-- **Computers Skills**: Autocad,Etabs,Primavera.
-- **Programing languages**: Basic knowledge of _C_ , _javascript_ ,Html.
+* **Computers Skills**: Autocad,Etabs,Primavera.
+* **Programing languages**: Basic knowledge of _C_ , _javascript_ ,Html.
