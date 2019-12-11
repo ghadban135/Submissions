@@ -1,0 +1,70 @@
+  nav {
+  overflow: hidden;
+  background-color: #264040;
+      }
+
+  nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 35px;
+    text-decoration: none;
+    font-size: 17px;
+    border-right: 1px solid white;
+    
+  }
+
+  a{
+    color: white;
+    
+  }
+  body{
+    background-color: #1d3030;
+    background-image: url('bglobe.jpg');
+    background-repeat: no-repeat;
+    background-size: 77% 245px;
+    background-position-x: center;
+    color: white;
+  }
+.kk{
+  border-left: 1px solid white;
+  padding-left: 10px;
+}
+
+  .back{
+    margin-left: 10%;
+   
+  }
+
+  .menu{
+    float: left;
+    width: 20%;
+  }
+
+ .section2{
+    float:right;
+    width: 70%;
+  }
+  .sub{
+float: left;
+width: 45%;
+  }
+  .other{
+    float: right;
+width: 45%;
+  }
+
+  .footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .all{
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 130px;
+   
+  }
