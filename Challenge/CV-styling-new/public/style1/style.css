@@ -1,0 +1,142 @@
+header {
+  background-color: grey;
+  padding: 1em 1em 2.5em 1em;
+}
+
+header div {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+  color: red;
+}
+
+#contact {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#contact h3 {
+  display: none;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.contact:first-child {
+  margin-top: 15px;
+}
+
+.contact-type {
+  background-color: red;
+  padding: 5px;
+}
+
+.contact-value {
+  background-color: black;
+  padding: 5px;
+  clear: right;
+}
+
+.contact-value a {
+  text-decoration: none;
+  color: red;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2em 6em;
+}
+
+.content section h3 {
+  border-bottom: 1px #cccccc solid;
+  padding: 5px;
+}
+
+#about p {
+  padding: 1em 1em 1em 0;
+}
+
+.skills {
+  padding: 1em 1em 1em 0;
+}
+
+.skills .skill {
+  padding: 10px 10px 10px 2px;
+  background-color: #d3d3d3;
+  margin: 5px;
+}
+
+.skills-primary .skill:nth-child(1) span {
+  background-color: red;
+  padding: 5px 50% 5px 0;
+}
+
+.skills-primary .skill:nth-child(2) span {
+  background-color: red;
+  padding: 5px 30% 5px 0;
+}
+
+.skills-primary .skill:nth-child(3) span {
+  background-color: red;
+  padding: 5px 1% 5px 0;
+}
+
+.skills-secondary .skill:nth-child(1) span {
+  background-color: #ff1a1a;
+  padding: 5px 80% 5px 0;
+}
+
+.skills-secondary .skill:nth-child(2) span {
+  background-color: #ff1a1a;
+  padding: 5px 50% 5px 0;
+}
+
+.skills-secondary .skill:nth-child(3) span {
+  background-color: #ff1a1a;
+  padding: 5px 60% 5px 0;
+}
+span {
+  color: white;
+}
+
+.experience-type {
+  color: red;
+}
+
+.experience-institution {
+  font-weight: lighter;
+  color: red;
+}
+
+.experience-description {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.experience-date,
+.experience-location {
+  color: #bfbfbf;
+}
+h3::before {
+  content: " \25CF";
+  font-size: 30px;
+  color: red;
+}
+h3 {
+  margin-bottom: 30px;
+}
+
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+}
