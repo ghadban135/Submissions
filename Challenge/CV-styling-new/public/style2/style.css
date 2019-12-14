@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 30px 0;
+}
+#competencies h3 {
+  grid-area: span 2 / span 1;
+}
+#education h3 {
+  grid-area: span 2 / span 1;
+}
+#experiences h3 {
+  grid-area: span 2 / span 1;
+}
+.experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  border-left: solid 1px black;
+}
+.experience-description {
+  grid-area: span 1 / span 2;
+}
+.experience-details {
+  text-align: right;
+  color: #bfbfbf;
+}
+.experience-type {
+  color: rgb(33, 134, 141);
+}
+.experience-institution {
+  display: none;
+}
+#hobbies ul {
+  padding-left: 50px;
+  border-left: solid 1px black;
+}
+.skills {
+  padding-left: 10px;
+  border-left: solid 1px black;
+  display: flex;
+}
+h3 {
+  text-align: center;
+}
+.contact {
+  display: none;
+}
+.skill {
+  padding: 10px;
+  margin: 0 10px 10px 10px;
+  background-color: rgb(33, 134, 141);
+  color: white;
+  width: 200px;
+  text-align: left;
+  font-size: 20px;
+}
+.skills-primary .skill:nth-child(1) span::after {
+  content: " \2605 \2605 \2605";
+  float: right;
+  font-size: 20px;
+}
+.skills-primary .skill:nth-child(2) span::after {
+  content: " \2605 \2605";
+  float: right;
+  font-size: 20px;
+}
+.skills-primary .skill:nth-child(3) span::after {
+  content: " \2605";
+  float: right;
+  font-size: 20px;
+}
+.skills-secondary .skill span {
+  font-size: 17px;
+}
+
+.skills-secondary .skill:nth-child(1) span::after {
+  content: " \2605 \2605 \2605 \2605 \2605";
+  float: right;
+  font-size: 12px;
+  padding-top: 4px;
+}
+.skills-secondary .skill:nth-child(2) span::after {
+  content: " \2605 \2605 \2605";
+  float: right;
+  font-size: 12px;
+  padding-top: 4px;
+}
+.skills-secondary .skill:nth-child(3) span::after {
+  content: " \2605 \2605 \2605 \2605";
+  float: right;
+  font-size: 12px;
+  padding-top: 4px;
+}
+h2,
+#contact h3,
+#about h3 {
+  display: none;
+}
+h1 {
+  padding: 20px;
+  margin: 0 100px;
+  border-bottom: solid 1px black;
+}
+.content {
+  margin-right: 100px;
+}
+#about p {
+  width: 800px;
+  margin-left: 100px;
+  color: #bfbfbf;
+}
+#about {
+  padding: 0px;
+}
+img {
+  position: absolute;
+  right: 200px;
+  top: 70px;
+  transform: scale(1.5) rotate(-20deg);
+}
+#contact {
+  background-image: url("message.png"), url("phone.png"), url("github.png"),
+    url("fb.jpeg");
+  background-repeat: no-repeat;
+  background-size: 70px, 70px, 70px, 80px;
+  background-position: bottom;
+  background-position-x: 300px, 400px, 500px, 600px;
+  margin-bottom: 100px;
+  padding-top: 50px;
+}
+
+@media (max-width: 600px) {
+  body div * {
+    margin: 0px;
+  }
+  .content {
+    margin: 0 0 20px 20px;
+  }
+  section {
+    display: initial;
+    padding: 10px;
+    margin: 20px;
+  }
+  img {
+    display: none;
+  }
+  h1 {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    border-bottom: solid 1px rgb(33, 134, 141);
+  }
+  #about p {
+    width: 100%;
+    margin: 0px 0px 100px 0px;
+    padding: 10px;
+  }
+  h3 {
+    width: min-content;
+    text-align: left;
+    border-bottom: solid 1px black;
+  }
+  .experience,
+  .skills,
+  #hobbies ul {
+    border-left: none;
+  }
+  .skills-primary {
+    margin-top: 40px;
+  }
+  .skills-secondary {
+    margin-bottom: 40px;
+  }
+  .experience {
+    margin-top: 40px;
+  }
+  ul {
+    padding-top: 20px;
+  }
+  body {
+    background-image: url("message.png"), url("phone.png"), url("github.png"),
+      url("fb.jpeg");
+    background-repeat: no-repeat;
+    background-size: 70px, 70px, 70px, 80px;
+    background-position: bottom;
+    background-position-x: 100px, 200px, 300px, 400px;
+  }
+}
