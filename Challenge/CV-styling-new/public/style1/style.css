@@ -73,7 +73,10 @@ header div {
   background-color: #d3d3d3;
   margin: 5px;
 }
-
+.skills-primary::before {
+  content: "Main";
+  font-weight: bold;
+}
 .skills-primary .skill:nth-child(1) span {
   background-color: red;
   padding: 5px 50% 5px 0;
@@ -87,6 +90,11 @@ header div {
 .skills-primary .skill:nth-child(3) span {
   background-color: red;
   padding: 5px 1% 5px 0;
+}
+
+.skills-secondary::before {
+  content: "Other";
+  font-weight: bold;
 }
 
 .skills-secondary .skill:nth-child(1) span {
@@ -103,14 +111,20 @@ header div {
   background-color: #ff1a1a;
   padding: 5px 60% 5px 0;
 }
-span {
-  color: white;
-}
 
+.experience-location::before {
+  content: "in";
+}
+.experience-location::after {
+  content: "on";
+}
 .experience-type {
   color: red;
 }
-
+.experience-type::after {
+  content: "@";
+  padding-left: 10px;
+}
 .experience-institution {
   font-weight: lighter;
   color: red;
@@ -134,9 +148,76 @@ h3 {
   margin-bottom: 30px;
 }
 
-html,
-body,
 * {
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 600px) {
+  header hgroup {
+    grid-area: header-hgroup;
+  }
+  header figure {
+    grid-area: header-figure;
+  }
+  #about {
+    grid-area: about;
+  }
+
+  #competencies {
+    grid-area: competencies;
+  }
+
+  #experiences {
+    grid-area: experience;
+  }
+
+  #education {
+    grid-area: education;
+  }
+
+  #hobbies {
+    grid-area: hobbies;
+  }
+
+  #contact {
+    grid-area: contact;
+  }
+  body div {
+    grid-template-areas:
+      "header-hgroup"
+      "header-figure"
+      "about"
+      "competencies"
+      "experience"
+      "education"
+      "hobbies"
+      "contact";
+  }
+
+  header div {
+    display: inherit;
+  }
+
+  #contact {
+    position: inherit;
+  }
+
+  #contact h3 {
+    display: initial;
+    padding-right: 80%;
+  }
+  .contact-value {
+    background-color: white;
+  }
+  .contacts {
+    width: max-content;
+  }
+  .contact-type {
+    color: white;
+  }
+  #hobbies {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
