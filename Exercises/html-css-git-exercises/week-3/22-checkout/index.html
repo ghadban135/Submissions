@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <div class="site-wrapper">
+    div class="site-wrapper">
       <main>
         <div class="shopping-basket">
           <h1 class="shopping-basket__title">Your Shopping Basket</h1>
@@ -38,6 +38,18 @@
           <h2 class="checkout__title">Checkout</h2>
           <form method="GET" id="checkout-form" class="checkout__form">
             <!-- Add the form fields here -->
+
+              <label for="c-name">Name</label><br>
+              <div><input type="text" name="customer-name" id="c-name"></div>
+              
+            
+              <label for="c-email">Email</label><br>
+              <div><input type="email" name="customer-email" id="c-email"></div>
+              
+            
+              <label for="c-phone">Phone</label><br>
+              <div><input type="tel" name="customer-phone" id="c-phone"></div>
+              
 
             <button type="submit">Complete Purchase</button>
           </form>
