@@ -56,14 +56,28 @@
         <form method="GET" class="contact-form">
           <div class="contact-form__field">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" required />
           </div>
           <div class="contact-form__field">
+            <label for="em">Email</label>
+            <input type="email" name="email" id="em" required />
+          </div>
+          <div class="contact-form__field">
+            <label for="mess">Message</label>
             <textarea
+              id="mess"
               name="message"
               placeholder="Your message should not be longer than 200 words."
+              required
             ></textarea>
           </div>
+          <br />
+          <fieldset>
+            <legend>What branch are you interested in?</legend>
+            <label> <input type="radio" name="branch" value="London" />London</label><br /><br />
+            <label> <input type="radio" name="branch" value="Glasgow" />Glasgow</label><br /><br />
+            <label> <input type="radio" name="branch" value="Manchester" />Manchester</label><br />
+          </fieldset>
           <button type="submit">Send</button>
         </form>
       </main>
