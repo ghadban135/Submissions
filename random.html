@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      margin: 70px 250px;
+    }
+    div {
+      background-color: red;
+      border: 3px solid;
+      text-align: center;
+    }
+    #demo {
+      background-color: white;
+      color: green;
+    }
+  </style>
+  <body>
+    <div>
+      <h3>
+        program that will randomly divide the class into an x number of groups
+      </h3>
+
+      <p>
+        Click the button (again and again) to sort the class in random groups.
+      </p>
+
+      <button onclick="myFunction()">Try it</button>
+
+      <p id="demo"></p>
+    </div>
+
+    <script>
+      var points, len, z, x;
+      x = prompt("Please give me number of groups:");
+      points = [
+        "abd el majed",
+        "abdallah",
+        "abdulkader",
+        "ahmad t",
+        "ahmad g",
+        "akram",
+        "ali",
+        "anas",
+        "bassel",
+        "bayan",
+        "bahaa",
+        "hassan",
+        "karim",
+        "mahmoud",
+        "malak",
+        "marwa",
+        "michel",
+        "mohamad",
+        "nasir",
+        "osama",
+        "rania",
+        "rayan",
+        "rudolf",
+        "sandra",
+        "tina",
+        "zeinab"
+      ];
+      len = points.length;
+      z = len / x;
+      z = z.toFixed(0);
+
+      function myFunction() {
+        points.sort(function(a, b) {
+          return 0.5 - Math.random();
+        });
+        document.getElementById("demo").style.marginBottom = "100px";
+        var i = 0,
+          y = [],
+          k = [],
+          text,
+          j = 0;
+        while (j < points.length) {
+          k[j] = points[j];
+          j++;
+        }
+
+        while (k.length != 0) {
+          y[i] = k.splice(0, z);
+          i++;
+        }
+
+        text = "<ul>";
+        y.forEach(prnt);
+        text += "</ul>";
+        document.getElementById("demo").innerHTML = text;
+        function prnt(value) {
+          text += "<li>" + value + "</li>";
+        }
+      }
+    </script>
+  </body>
+</html>
