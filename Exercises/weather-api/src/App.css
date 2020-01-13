@@ -1,21 +1,47 @@
 .app {
-  height: 100vh;
-  width: 100vw;
-  transition: background-color 1s ease-in;
+  font-family: "Raleway", sans-serif;
 }
-
-.app__header,
-.app__main {
-  width: 100%;
+.header {
+  background-color: #7b88dc;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.main {
+  background-color: #9cc2f7;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  font-family: "Raleway", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
-/*  Search bar */
-
-/* Current weather */
+.footer {
+  background-color: #9cc2f7;
+  display: flex;
+  height: 230px;
+  justify-content: space-around;
+}
+.ButtonFindWeathe {
+  background-color: #5879c7;
+  height: 40px;
+  font-size: 15px;
+  border-width: 0;
+}
+.inputcity {
+  background-color: #7b88dc;
+  border-width: 0;
+  color: white;
+  width: 30%;
+}
+.imge {
+  width: 180px;
+  height: 180px;
+}
+.small {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+}
+.first {
+  color: white;
+  font-weight: bold;
+}
