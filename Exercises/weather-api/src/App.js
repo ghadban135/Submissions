@@ -33,7 +33,8 @@ class App extends Component {
     const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=8&units=metric&appid=177068d067d414c6ac4c134a7da328d6`);
     const data = await response.json();
     console.log(data);
-   
+
+   if (data.cod=== '200'){
     this.setState({
      
       desWeather:data.list[0].weather[0].description,
@@ -59,7 +60,11 @@ class App extends Component {
       
       error:""  
     }); 
-  
+   }
+   else
+   {
+    alert("city not found");
+   }
   }
 
 
