@@ -29,3 +29,22 @@ WHERE Name='Layal' ;
 
 
 DELETE FROM students WHERE Name='Layal';
+
+#join
+
+select employees.Name,companies.Name,companies.Date
+from employees
+inner join companies
+on employees.ID=companies.ID;
+
+select employees.Name
+from employees 
+inner join companies
+on employees.Company=companies.Name
+where companies.Date<2000;
+
+select companies.Name
+from  companies
+inner join employees
+on employees.Company=companies.Name
+where employees.Role='Graphic Designer';
