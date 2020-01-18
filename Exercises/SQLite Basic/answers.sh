@@ -48,3 +48,26 @@ from  companies
 inner join employees
 on employees.Company=companies.Name
 where employees.Role='Graphic Designer';
+
+
+
+#Count & Filter
+
+select Name from (select Name, max(points) from students);
+
+
+select avg(Points)
+from students;
+
+select count(ID)
+from students
+where Points=500;
+
+select Name
+from students
+where name like '%s%';
+
+
+select *
+from students
+order by points desc;
