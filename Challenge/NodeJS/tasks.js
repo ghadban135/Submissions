@@ -48,6 +48,11 @@ function onDataReceived(text) {
     console.log("error");
   } else if (text === "help\n") {
     help();
+  } else if (namee[0] === "remove") {
+    remove(namee[1]);
+  } else if (text === "remove\n") {
+    liss.pop();
+    list();
   } else {
     unknownCommand(text);
   }
@@ -72,6 +77,11 @@ function list() {
     console.log(`${1 + i} - ${liss[i]}`);
     i++;
   }
+}
+
+function remove(x) {
+  liss.splice(x - 1, 1);
+  list();
 }
 
 function add(x) {
