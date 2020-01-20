@@ -80,8 +80,10 @@ function list() {
 }
 
 function remove(x) {
-  liss.splice(x - 1, 1);
-  list();
+  if (x <= liss.length && x > 0) {
+    liss.splice(x - 1, 1);
+    list();
+  } else console.log("number does not exist");
 }
 
 function add(x) {
