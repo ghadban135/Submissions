@@ -42,6 +42,10 @@ function onDataReceived(text) {
     hellos(namee[1]);
   } else if (text === "list\n") {
     list();
+  } else if (namee[0] === "add") {
+    add(text);
+  } else if (text === "add\n") {
+    console.log("error");
   } else if (text === "help\n") {
     help();
   } else {
@@ -68,6 +72,17 @@ function list() {
     console.log(`${1 + i} - ${liss[i]}`);
     i++;
   }
+}
+
+function add(x) {
+  let q = x.split(" ");
+  q.shift();
+  let j = q.toString();
+  j = j.replace(/\,/g, " ");
+  j = j.replace("\n", "");
+  console.log(j);
+  liss.push(j);
+  list();
 }
 
 /**
