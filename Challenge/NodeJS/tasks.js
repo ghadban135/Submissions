@@ -124,6 +124,9 @@ function help() {
   console.log("type 'hello' to say hello");
   console.log("type 'exit' or 'quit' to stop the app");
   console.log("type 'hello name' to print'hello name !'");
+  console.log("type 'list' to display the list");
+  console.log("type 'add' to add tasks");
+  console.log("type 'remove' to remove tasks");
 }
 
 /**
