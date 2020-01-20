@@ -53,6 +53,10 @@ function onDataReceived(text) {
   } else if (text === "remove\n") {
     liss.pop();
     list();
+  } else if (text === "edit\n") {
+    console.log("error");
+  } else if (namee[0] === "edit") {
+    edit(text);
   } else {
     unknownCommand(text);
   }
@@ -77,6 +81,26 @@ function list() {
     console.log(`${1 + i} - ${liss[i]}`);
     i++;
   }
+}
+function edit(x) {
+  let q = x.split(" ");
+  q.shift();
+  let y = q[0];
+  if (isNaN(y)) {
+    let j = q.toString();
+    j = j.replace(/\,/g, " ");
+    j = j.replace("\n", "");
+    liss.pop();
+    liss.push(j);
+    list();
+  } else if (y < liss.length && y > 0) {
+    q.shift();
+    let k = q.toString();
+    k = k.replace(/\,/g, " ");
+    k = k.replace("\n", "");
+    liss.splice(y - 1, 1, k);
+    list();
+  } else console.log("number does not exist");
 }
 
 function remove(x) {
