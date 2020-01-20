@@ -67,6 +67,11 @@ function hello() {
   console.log("hello!");
 }
 
+/**
+ * Says hello x!
+ * @param  {string} x the text received
+ * @returns {void}
+ */
 function hellos(x) {
   res = x.replace("\n", "!");
   console.log(`hello ${res}`);
@@ -81,6 +86,7 @@ function hellos(x) {
 function help() {
   console.log("type 'hello' to say hello");
   console.log("type 'exit' or 'quit' to stop the app");
+  console.log("type 'hello name' to print'hello name !'");
 }
 
 /**
