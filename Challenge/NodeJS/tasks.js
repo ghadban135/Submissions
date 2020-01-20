@@ -40,6 +40,8 @@ function onDataReceived(text) {
     hello();
   } else if (namee[0] === "hello") {
     hellos(namee[1]);
+  } else if (text === "list\n") {
+    list();
   } else if (text === "help\n") {
     help();
   } else {
@@ -56,6 +58,16 @@ function onDataReceived(text) {
  */
 function unknownCommand(c) {
   console.log('unknown command: "' + c.trim() + '"');
+}
+
+let liss = ["read a book", "playing football", "eat sushi"];
+
+function list() {
+  let i = 0;
+  while (liss[i] != undefined) {
+    console.log(`${1 + i} - ${liss[i]}`);
+    i++;
+  }
 }
 
 /**
