@@ -62,6 +62,13 @@ function unknownCommand(c) {
 function hello() {
   console.log("hello!");
 }
+
+/**
+ * This function list all the possible commands
+ * This function is supposed to run when you type 'help'
+ * @returns {void}
+ */
+
 function help() {
   console.log("type 'hello' to say hello");
   console.log("type 'exit' or 'quit' to stop the app");
