@@ -66,6 +66,7 @@ function unknownCommand(c) {
 function hello() {
   console.log("hello!");
 }
+
 function hellos(x) {
   res = x.replace("\n", "!");
   console.log(`hello ${res}`);
