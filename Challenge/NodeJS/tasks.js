@@ -15,11 +15,30 @@ function startApp(name) {
   console.log(`Welcome to ${name}'s application!`);
   console.log("--------------------");
 
-  fs.readFile("./database.json", (err, data) => {
-    if (err) throw err;
-    liss = JSON.parse(data);
-    console.log(JSON.parse(data));
-  });
+  let data = JSON.stringify(liss);
+  if (process.argv[2]) {
+    fs.stat(process.argv[2], function(err) {
+      if (!err) {
+        fs.readFile(process.argv[2], (err, data) => {
+          if (err) throw err;
+          liss = JSON.parse(data);
+        });
+      } else if (err.code === "ENOENT") {
+        fs.writeFile(process.argv[2], data, err => {
+          if (err) throw err;
+        });
+        fs.readFile(process.argv[2], (err, data) => {
+          if (err) throw err;
+          liss = JSON.parse(data);
+        });
+      }
+    });
+  } else {
+    fs.readFile("./database.json", (err, data) => {
+      if (err) throw err;
+      liss = JSON.parse(data);
+    });
+  }
 }
 
 /**
@@ -193,13 +212,26 @@ function help() {
 let fs = require("fs");
 function quit() {
   let data = JSON.stringify(liss);
-  fs.writeFile("./database.json", data, err => {
-    if (err) throw err;
-    console.log("The file has been saved!");
-    console.log("Quitting now, goodbye!");
-    process.exit();
-  });
+  if (process.argv[2]) {
+    fs.writeFile(process.argv[2], data, err => {
+      if (err) throw err;
+      console.log("The file has been saved!");
+      console.log("Quitting now, goodbye!");
+      process.exit();
+    });
+  } else {
+    fs.writeFile("./database.json", data, err => {
+      if (err) throw err;
+      console.log("The file has been saved!");
+      console.log("Quitting now, goodbye!");
+      process.exit();
+    });
+  }
 }
 
 // The following line starts the application
-startApp("Ahmad Ghadban");
+startApp("ahmad ghadban");
+
+process.argv.forEach((val, index) => {
+  console.log(`${index}: ${val}`);
+});
