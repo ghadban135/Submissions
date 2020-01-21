@@ -52,6 +52,7 @@ function onDataReceived(text) {
     remove(namee[1]);
   } else if (text === "remove\n") {
     liss.pop();
+    done.pop();
     list();
   } else if (text === "edit\n") {
     console.log("error");
@@ -74,11 +75,12 @@ function unknownCommand(c) {
 }
 
 let liss = ["read a book", "playing football", "eat sushi"];
+let done = ["✓", " ", "✓"];
 
 function list() {
   let i = 0;
   while (liss[i] != undefined) {
-    console.log(`${1 + i} - ${liss[i]}`);
+    console.log(`${1 + i} - [${done[i]}] ${liss[i]}`);
     i++;
   }
 }
@@ -93,7 +95,7 @@ function edit(x) {
     liss.pop();
     liss.push(j);
     list();
-  } else if (y < liss.length && y > 0) {
+  } else if (y <= liss.length && y > 0) {
     q.shift();
     let k = q.toString();
     k = k.replace(/\,/g, " ");
@@ -106,6 +108,7 @@ function edit(x) {
 function remove(x) {
   if (x <= liss.length && x > 0) {
     liss.splice(x - 1, 1);
+    done.splice(x - 1, 1);
     list();
   } else console.log("number does not exist");
 }
@@ -116,8 +119,8 @@ function add(x) {
   let j = q.toString();
   j = j.replace(/\,/g, " ");
   j = j.replace("\n", "");
-  console.log(j);
   liss.push(j);
+  done.push(" ");
   list();
 }
 
