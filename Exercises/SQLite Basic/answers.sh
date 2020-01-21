@@ -1,73 +1,71 @@
-select * from students
-select Name from students
-select * from students where age>30
-select Name from students where age=30 And Gender='F'
-select points from students where Name='Alex'
-insert into students(Name,gender,age,Points) values('Malako','F',21,900)
-update students set points=points+50 where Name='Basma'
-update students set points=points-5 where Name='Alex'
+"select * from students"
+"select Name from students"
+"select * from students where age>30"
+"select Name from students where age=30 And Gender='F'"
+"select points from students where Name='Alex'"
+"insert into students(Name,gender,age,Points) values('Malako','F',21,900)"
+"update students set points=points+50 where Name='Basma'"
+"update students set points=points-5 where Name='Alex'"
 
-#create table
 
-    create table graduates(
+
+    "create table graduates(
     ID INTEGER NOT NULL PRIMARY KEY autoincrement,
     Name TEXT NOT NULL UNIQUE,
     Age INTEGER,
     Gender TEXT,
     Points INTEGER,
     Graduation date
-    );
+    );"
 
-INSERT INTO graduates('Id','Name','Age','Gender','Points')
+"INSERT INTO graduates('Id','Name','Age','Gender','Points')
 SELECT * FROM students
-WHERE Name='Layal' 
+WHERE Name='Layal'" 
 
 
-UPDATE graduates
+"UPDATE graduates
 SET Graduation = '08/09/2018'
-WHERE Name='Layal' ;
+WHERE Name='Layal' ;"
 
 
-DELETE FROM students WHERE Name='Layal';
+"DELETE FROM students WHERE Name='Layal';"
 
-#join
-
-select employees.Name,companies.Name,companies.Date
+"select employees.Name,companies.Name,companies.Date
 from employees
 inner join companies
-on employees.ID=companies.ID;
+on employees.ID=companies.ID;"
 
-select employees.Name
+"select employees.Name
 from employees 
 inner join companies
 on employees.Company=companies.Name
-where companies.Date<2000;
+where companies.Date<2000;"
 
-select companies.Name
+"select companies.Name
 from  companies
 inner join employees
 on employees.Company=companies.Name
-where employees.Role='Graphic Designer';
+where employees.Role='Graphic Designer';"
 
 
 
-#Count & Filter
-
-select Name from (select Name, max(points) from students);
 
 
-select avg(Points)
-from students;
+"select Name from (select Name, max(points) from students);"
 
-select count(ID)
+
+"select avg(Points)
+from students;"
+
+"select count(ID)
 from students
-where Points=500;
+where Points=500;"
 
-select Name
+"select Name
 from students
-where name like '%s%';
+where name like '%s%';"
 
 
-select *
+"select *
 from students
-order by points desc;
+order by points desc;"
