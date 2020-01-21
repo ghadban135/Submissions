@@ -172,7 +172,10 @@ function help() {
   console.log("type 'hello name' to print'hello name !'");
   console.log("type 'list' to display the list");
   console.log("type 'add' to add tasks");
-  console.log("type 'remove' to remove tasks");
+  console.log("type 'remove x' to remove 'x' tasks");
+  console.log("type 'edit x' to edit 'x' tasks");
+  console.log("type 'check x' to checking tasks 'x'");
+  console.log("type 'uncheck' to uncheck 'x' tasks");
 }
 
 /**
