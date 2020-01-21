@@ -14,6 +14,12 @@ function startApp(name) {
   process.stdin.on("data", onDataReceived);
   console.log(`Welcome to ${name}'s application!`);
   console.log("--------------------");
+
+  fs.readFile("./database.json", (err, data) => {
+    if (err) throw err;
+    liss = JSON.parse(data);
+    console.log(JSON.parse(data));
+  });
 }
 
 /**
@@ -83,7 +89,7 @@ function unknownCommand(c) {
 }
 
 let liss = ["read a book", "playing football", "eat sushi"];
-let done = ["✓", " ", "✓"];
+let done = ["✓", "✓", " "];
 
 function list() {
   let i = 0;
@@ -183,9 +189,16 @@ function help() {
  *
  * @returns {void}
  */
+
+let fs = require("fs");
 function quit() {
-  console.log("Quitting now, goodbye!");
-  process.exit();
+  let data = JSON.stringify(liss);
+  fs.writeFile("./database.json", data, err => {
+    if (err) throw err;
+    console.log("The file has been saved!");
+    console.log("Quitting now, goodbye!");
+    process.exit();
+  });
 }
 
 // The following line starts the application
