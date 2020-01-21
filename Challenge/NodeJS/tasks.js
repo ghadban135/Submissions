@@ -58,6 +58,14 @@ function onDataReceived(text) {
     console.log("error");
   } else if (namee[0] === "edit") {
     edit(text);
+  } else if (text === "check\n") {
+    console.log("error");
+  } else if (namee[0] === "check") {
+    check(namee[1]);
+  } else if (text === "uncheck\n") {
+    console.log("error");
+  } else if (namee[0] === "uncheck") {
+    uncheck(namee[1]);
   } else {
     unknownCommand(text);
   }
@@ -84,6 +92,15 @@ function list() {
     i++;
   }
 }
+function check(x) {
+  done[x - 1] = "✓";
+  list();
+}
+function uncheck(x) {
+  done[x - 1] = " ";
+  list();
+}
+
 function edit(x) {
   let q = x.split(" ");
   q.shift();
