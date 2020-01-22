@@ -1,0 +1,405 @@
+.wrapper{
+    background-image: url("img/111.jpeg");
+    background-repeat: no-repeat;
+    
+    min-height: 100px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 90px;
+}
+.wall{
+    background-image: url("img/787.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.priority{
+    margin: 150px 0 !important;
+}
+.priority,.partt div h3{
+    color: green;
+    
+}
+.priority h2,.priority p{
+  
+    color: initial;
+}
+.priority ul{
+    margin: 0 80px;
+}
+.ritt{
+   margin-left: auto;
+}
+.hido{
+    display: none;
+}
+.dist{
+    display: flex;
+   
+}
+.partt{
+    display: flex;
+    align-content: space-around;
+}
+.header{
+    padding-bottom: 50px;
+}
+.problem{
+padding: 0 50px 30px 50px !important;
+}
+
+.mission{
+    padding: 0 50px 30px 50px !important;
+}
+.textt{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-family: 'Chronicle Text G2 A','Chronicle Text G2 B',serif;
+}
+.asd{
+    filter: brightness(80%);
+}
+.cont {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+  }
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Chronicle Text G2 A','Chronicle Text G2 B',serif;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.35);
+  }
+  .side1{
+    margin-right: 50px;
+    height: 400px;
+    width: 500px;
+    flex: 45%;
+    
+  }
+ .side2{
+    align-self: center;
+    flex: 45%;
+     margin: 30px;
+     font-family: 'Chronicle Text G2 A','Chronicle Text G2 B',serif;
+    font-size: 18px;
+    line-height: 1.5;
+    word-wrap: break-word;
+ }
+ .side2 h4{
+    font-size: 28px;
+    font-weight: 300;
+ }
+ .hov img:nth-last-child(2) {
+    display: none;
+  }
+  .hov:hover img:nth-last-child(2) {
+    display: block;  
+    margin-left: 80px;
+    transform: scale(1.2);
+   
+  }
+  .hov:hover img:first-child {
+    display: none;  
+  }
+.hov h5{
+max-width: 170px;
+margin: auto;
+padding-top: 10px;
+color: initial;
+}
+.footer{
+    padding-top: 7px;
+    margin: 0;
+    background-color:#2a2a2a;
+    text-align: center;
+    height: 40px;
+    justify-items: center;
+    color: white;
+    font-style: italic;
+}
+legend{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contactt{
+display: flex;
+margin-bottom: 50px;
+}
+
+.info{
+    flex: 65%;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 14%;
+    
+}
+.minadd{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  
+}
+.eve{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    align-items: center;
+    margin-bottom: 45px;
+}
+.pokl{
+    align-items: initial;
+}
+.part{
+    float: left;
+    width: 30%;
+   
+    text-align: center;
+    font-weight: bold;
+    background-color:rgb(236, 230, 217);
+  
+    
+}
+.eve::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.imo{
+   max-width: 100%;
+   height: auto; 
+   margin-bottom: 20px;
+}
+@media (max-width: 1100px){
+    .centered h2,.centered h3{
+        font-size: 26px;
+    }
+    .hov:hover img:nth-last-child(2) {
+        
+        margin-left: 50px;
+        
+       
+      }
+}
+@media (max-width: 1000px){
+    .problem,.mission{
+        font-size: 14px;
+    }
+    .side1{
+        width: 400px;
+        height: 350px;
+    }
+    .side2{
+        margin: 10px;
+        font-size: 15px;
+    }
+    .centered h2,.centered h3{
+        font-size: 21px;
+    }
+
+    .textt div p a,.textt p a{
+        display: none;
+    }
+
+    .priority div,.priority p{
+        font-size: medium !important;
+    }
+    .priority h2{
+        font-size: x-large !important;
+    }
+    .hov h5{
+        font-size: 15px;
+    }
+    .hov:hover img:nth-last-child(2) {
+        display: none;
+    }
+    .hov:hover img:first-child {
+        display: initial;  
+      }
+}
+
+@media (max-width: 840px) {
+    .header nav a{
+        font-size: 15px;
+    }
+    .navbar-brand img{
+        width: 60px !important;
+    }
+    .wrapper{
+        margin-top: 70px;
+    }
+    .priority{
+        margin: 50px 0 !important;
+    }
+    .side1{
+        width: 300px;
+        height: 260px;
+    }
+    .side2{
+        font-size: 15px;
+        margin: 10px;
+    }
+    
+    .centered h2,.centered h3{
+        font-size: 18px;
+    }
+    .tyre h1,.mnb{
+        font-size: 25px !important;
+    }
+    .tyre{
+        top: 50% !important;
+    }
+    .klm{
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold;
+    }
+ 
+    .carousel-item img{
+        height: 400px;
+    }
+    .cont div span{
+        display: none;
+    }
+    .info{
+        margin:0 5% !important;
+        line-height: 1.5;
+    }
+    
+}
+@media (max-width: 500px){
+    .problem,.mission{
+        font-size: 11px;
+    }
+    .problem h3,.mission h3{
+        font-size: 18px  !important;
+    }
+    .partt{
+        flex-direction: column;
+    }
+    .priority div,.priority p{
+        font-size: small !important;
+    }
+    .priority h2{
+        font-size: medium !important;
+    }
+    .hov h5{
+        font-size: 11px;
+    }
+    .side1{
+        width: 230px;
+        height: 230px;
+        margin: 0;
+    }
+    .side2{
+        font-size: 10px;
+        line-height: 1.2;
+    }
+    .side2 h4{
+        font-size: 15px;
+    }
+    .centered h2,.centered h3{
+        font-size: 10px;
+    }
+    .textt{
+        padding: 0;
+        margin: 0;
+    }
+    .side2 p span{
+        display: none;
+    }
+    .carousel-item img{
+        height: 300px;
+    }
+    .fixed-top{
+        position: absolute !important;
+    }
+    .wrapper{
+        margin-top: 0;
+    }
+    .navbar {
+        padding: 0 1rem !important;
+    }
+    .header nav a{
+        font-size: 12px;
+    }
+    .navbar-brand img{
+        width: 40px !important;
+    }
+    .footer{
+        font-size: 10px;
+    }
+    .centered h3 span{
+        display: none;
+    }
+    .hido{
+        display: initial;
+    }
+    .tyre h1,.mnb{
+        font-size: 14px !important;
+    }
+    .tyre p{
+        font-size: 12px !important;
+        margin-bottom: 5px;
+    }
+    .lop{
+        margin-top: 42px;
+    }
+    .tyre{
+        top: 65% !important;
+    }
+    .eve{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .part{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .asdfg{
+        width: 73% !important;
+        margin-left: 50px;
+    }
+    .okm{
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+    .klm{
+        font-size: 11px;
+    }
+    .contactt{
+        flex-direction: column-reverse;
+    }
+    fieldset{
+        margin: 0 20px !important;
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    .ropo{
+        margin-left: 50px;
+    }
+    .minadd{
+        padding-bottom: 0;
+        padding-top: 10px;
+    }
+    .minadd span:first-child{
+        font-size: 18px !important;
+    }
+    .minadd span:nth-last-child(1){
+        font-size: 10px;
+        margin-left: 60px;
+    }
+  
+}
