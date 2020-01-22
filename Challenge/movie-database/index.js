@@ -22,6 +22,23 @@ app.get("/time", (req, res) => {
   res.send({ status: 200, message: `${TIME1}:${TIME2}` });
 });
 
+app.get("/hello/:idd?", (req, res) => {
+  var id = req.params.idd;
+  res.send({ status: 200, message: "Hello", id });
+});
+
+app.get("/search?:s?", (req, res) => {
+  var search = req.query.s;
+  if (search) {
+    res.send({ status: 200, message: "ok", data: search });
+  } else
+    res.send({
+      status: 500,
+      error: true,
+      message: "you have to provide a search"
+    });
+});
+
 // make the server listen to requests
 app.listen(PORT, () => {
   console.log(`Server running at: http://localhost:${PORT}/`);
