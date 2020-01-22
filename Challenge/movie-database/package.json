@@ -1,0 +1,25 @@
+{
+  "name": "ahmad",
+  "version": "1.0.0",
+  "description": "codi-database",
+  "main": "indexx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "gitt"
+  },
+  "keywords": [
+    "keyy"
+  ],
+  "author": "authorr",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
