@@ -91,6 +91,23 @@ app.get("/movies/read/id/:idm?", (req, res) => {
     });
 });
 
+app.get("/movies/add", (req, res) => {
+  let title = req.query.title;
+  let year = req.query.year;
+  let rating = req.query.rating;
+  if (title && year && !isNaN(year) && year.length == 4) {
+    if (!rating) rating = 4;
+    const newMovie = { title, year, rating };
+    movies.push(newMovie);
+    res.send({ status: 200, data: movies });
+  } else
+    res.send({
+      status: 403,
+      error: true,
+      message: "you cannot create a movie without providing a title and a year"
+    });
+});
+
 // make the server listen to requests
 app.listen(PORT, () => {
   console.log(`Server running at: http://localhost:${PORT}/`);
