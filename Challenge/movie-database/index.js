@@ -80,6 +80,17 @@ app.get("/movies/read/by-title", (req, res) => {
   res.send({ status: 200, data: sortedTit });
 });
 
+app.get("/movies/read/id/:idm?", (req, res) => {
+  var id = req.params.idm;
+  if (movies[id]) res.send({ status: 200, data: movies[id] });
+  else
+    res.send({
+      status: 404,
+      error: true,
+      message: `the movie ${id} does not exist`
+    });
+});
+
 // make the server listen to requests
 app.listen(PORT, () => {
   console.log(`Server running at: http://localhost:${PORT}/`);
