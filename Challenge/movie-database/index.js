@@ -108,6 +108,19 @@ app.get("/movies/add", (req, res) => {
     });
 });
 
+app.get("/movies/delete/:iddel?", (req, res) => {
+  var movieDel = req.params.iddel;
+  if (movies[movieDel] && movieDel != 0) {
+    movies.splice(movieDel - 1, 1);
+    res.send({ status: 200, data: movies });
+  } else
+    res.send({
+      status: 404,
+      error: true,
+      message: `the movie ${movieDel} does not exist`
+    });
+});
+
 // make the server listen to requests
 app.listen(PORT, () => {
   console.log(`Server running at: http://localhost:${PORT}/`);
