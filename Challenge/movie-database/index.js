@@ -56,6 +56,30 @@ const movies = [
   { title: "Brazil", year: 1985, rating: 8 },
   { title: "الإرهاب والكباب‎", year: 1992, rating: 6.2 }
 ];
+
+const sortedMov = movies.slice().sort((a, b) => a.year - b.year);
+app.get("/movies/read/by-date", (req, res) => {
+  res.send({ status: 200, data: sortedMov });
+});
+
+const sortedRat = movies.slice().sort((a, b) => b.rating - a.rating);
+app.get("/movies/read/by-rating", (req, res) => {
+  res.send({ status: 200, data: sortedRat });
+});
+
+const sortedTit = movies.slice().sort(function(a, b) {
+  if (a.title < b.title) {
+    return -1;
+  }
+  if (a.title > b.title) {
+    return 1;
+  }
+  return 0;
+});
+app.get("/movies/read/by-title", (req, res) => {
+  res.send({ status: 200, data: sortedTit });
+});
+
 // make the server listen to requests
 app.listen(PORT, () => {
   console.log(`Server running at: http://localhost:${PORT}/`);
