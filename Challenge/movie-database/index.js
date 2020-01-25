@@ -121,6 +121,17 @@ app.get("/movies/delete/:iddel?", (req, res) => {
     });
 });
 
+app.get("/movies/update/:iddel?", (req, res) => {
+  var id = req.params.iddel;
+  let title = req.query.title;
+  let year = req.query.year;
+  let rating = req.query.rating;
+  if (title) movies[id].title = title;
+  if (year) movies[id].year = year;
+  if (rating) movies[id].rating = rating;
+  res.send({ status: 200, data: movies });
+});
+
 // make the server listen to requests
 app.listen(PORT, () => {
   console.log(`Server running at: http://localhost:${PORT}/`);
