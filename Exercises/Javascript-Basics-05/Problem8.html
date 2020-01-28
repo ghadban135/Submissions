@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>Enter your guess (between 1 and 100)</div>
+    <input type="number" id="myNumber" />
+    <button type="button" onclick="myRand()">Submit</button>
+    <div id="demo"></div>
+
+    <script>
+      var rad = Math.floor(Math.random() * 100) + 1;
+      var k = 0;
+      var b = 0;
+      function myRand() {
+        var x = document.getElementById("myNumber").value;
+        if (b != x) {
+          b = x;
+          k++;
+          if (x > rad) {
+            document.getElementById("demo").innerHTML =
+              "Too Large trial " + k + "/8";
+          } else if (x < rad) {
+            document.getElementById("demo").innerHTML = "Too small " + k + "/8";
+          } else {
+            document.getElementById("demo").innerHTML =
+              "Correct  with " + k + " trials!";
+            k = 0;
+            b = 0;
+            rad = Math.floor(Math.random() * 100) + 1;
+          }
+          if (k == 8 && x != rad) {
+            document.getElementById("demo").innerHTML =
+              "GAME OVER the correct answer is " + rad;
+            k = 0;
+            b = 0;
+            rad = Math.floor(Math.random() * 100) + 1;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
